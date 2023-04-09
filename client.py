@@ -21,7 +21,7 @@ async def websocket_client(uri: str):
             # Receive and print the server response
             response = await websocket.recv()
             response_data = json.loads(response)
-            print(response_data)
+            print("Response: " + response_data["output"])
 
 
 if __name__ == "__main__":
