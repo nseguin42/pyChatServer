@@ -40,8 +40,10 @@ class Server:
 
     async def run(self) -> None:
         await websockets.serve(
-            self.websocket_handler, "localhost", self.config.websocket_port
+            self.websocket_handler, self.config.websocket_ip, self.config.websocket_port
         )
-        print("WebSocket server running at ws://localhost:8765")
+        print(
+            f"WebSocket server running at ws://{self.config.websocket_ip}:{self.config.websocket_port}"
+        )
 
         await asyncio.Future()  # run forever

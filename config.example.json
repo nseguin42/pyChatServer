@@ -1,6 +1,7 @@
 {
   "model": "EleutherAI/gpt-neo-1.3B",
   "use_gpu_if_available": true,
+  "websocket_ip": "localhost",
   "websocket_port": 8765,
   "model_config": {
     "do_sample": true,
