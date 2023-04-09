@@ -14,11 +14,11 @@ RUN pip install --no-cache-dir poetry==1.4.2
 RUN poetry install
 
 # Copy the source code into the container
-COPY src/ .
+COPY src/ src/
 COPY config.json .
 
 # Expose the port used by the WebSocket server
 EXPOSE 8765
 
 # Start the WebSocket server
-ENTRYPOINT ["poetry", "run", "python", "main.py"]
+ENTRYPOINT ["poetry", "run", "python", "src/main.py"]
