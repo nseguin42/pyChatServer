@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pychatserver"
+version = "0.1.0"
+description = ""
+authors = ["Nick Seguin <nseguin42@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^1.0.0"
+torch = "*"
+
+transformers = { git = "https://github.com/huggingface/transformers.git", rev = "main" }
+datasets = { version = "*", source = "pypi" }
+orjson = "^3.8.10"
+websockets = "^11.0.1"
+
+[tool.poetry.dev-dependencies]
+pylint = { version = "*", source = "pypi" }
+black = { version = "*", source = "pypi" }
+reorder-python-imports = { version = "*", source = "pypi" }
+
+
+[build-system]
+requires = ["poetry-core>=1.4.2"]
+build-backend = "poetry.core.masonry.api"

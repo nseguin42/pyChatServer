@@ -1,0 +1,15 @@
+{
+  "model": "EleutherAI/gpt-neo-1.3B",
+  "use_gpu_if_available": true,
+  "websocket_port": 8765,
+  "model_config": {
+    "do_sample": true,
+    "temperature": 0.6,
+    "top_k": 50,
+    "top_p": 0.92,
+    "no_repeat_ngram_size": 6,
+    "repetition_penalty": 1.6,
+    "length_penalty": 0.8,
+    "max_new_tokens": 64
+  }
+}
