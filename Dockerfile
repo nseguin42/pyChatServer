@@ -13,9 +13,10 @@ RUN pip install --no-cache-dir poetry==1.4.2
 # Install the dependencies
 RUN poetry install
 
-# Copy the source code into the container
+# Copy the source code, configuration, and model
 COPY src/ src/
 COPY config.json .
+COPY model/ model/
 
 # Expose the port used by the WebSocket server
 EXPOSE 8765
